@@ -11,8 +11,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            height: 50px;
-            width: 120px;
+            height: 80vh; /* Set the height to 80% of the viewport height */
+            width: 80vw; /* Set the width to 80% of the viewport width */
             background: #333;
             cursor: pointer;
             font-family: Consolas, Courier New, monospace;
@@ -36,21 +36,8 @@
     </style>
 </head>
 <body>
-    <button class="button" onclick="forceDownload()">Download File</button>
+    <button class="button">Click me</button>
     <img src="https://i.imgur.com/pQT0l.gif" alt="Animated Picture">
-
-    <script>
-        function forceDownload() {
-            const fileURL = 'https://m.media-amazon.com/images/I/61R4FLZNrRL._AC_UF350,350_QL50_.jpg';
-            const fileName = 'file.ext';
-
-            const link = document.createElement('a');
-            link.href = fileURL;
-            link.download = fileName;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    </script>
 </body>
 </html>
+
