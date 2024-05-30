@@ -7,36 +7,31 @@
     <style>
         /* Style for the button */
         .button {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+            cursor: pointer;
+        }
+
+        /* Additional styles for the button content */
+        .button-content {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            height: 80vh; /* Set the height to 80% of the viewport height */
-            width: 80vw; /* Set the width to 80% of the viewport width */
-            background: #333;
-            cursor: pointer;
-            font-family: Consolas, Courier New, monospace;
-            border: solid #404c5d 1px;
-            font-size: 16px;
-            color: rgb(161, 161, 161);
-            border-radius: 5px;
-            box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
-                inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
-        }
-
-        .button:hover {
-            box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
-            color: #d6d6d6;
-        }
-
-        .button:active {
-            box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
-            color: #d6d6d6;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <button class="button">Click me</button>
+    <button class="button">
+        <div class="button-content">Click me</div>
+    </button>
     <img src="https://i.imgur.com/pQT0l.gif" alt="Animated Picture">
 </body>
 </html>
