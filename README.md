@@ -12,27 +12,37 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
             cursor: pointer;
         }
 
-        /* Additional styles for the button content */
-        .button-content {
+        .button-inner {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-family: Arial, sans-serif;
+            font-family: Consolas, Courier New, monospace;
             font-size: 24px;
             color: white;
+            padding: 20px 40px;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
         }
     </style>
 </head>
 <body>
-    <button class="button">
-        <div class="button-content">Click me</div>
+    <button class="button" onclick="showMessage()">
+        <div class="button-inner">Click me</div>
     </button>
     <img src="https://i.imgur.com/pQT0l.gif" alt="Animated Picture">
+    
+    <script>
+        function showMessage() {
+            alert("Button clicked!");
+        }
+    </script>
 </body>
 </html>
 
